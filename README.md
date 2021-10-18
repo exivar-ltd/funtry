@@ -5,9 +5,9 @@ Super lightweight Async/Sync function handler that provides a one liner replacem
 ## Installation
 
 ```shell
-npm install funtry
+npm install @exivar/funtry
 #or
-yarn add funtry
+yarn add @exivar/funtry
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ yarn add funtry
 Common Js
 
 ```js
-const asyncTry = require('funtry').asyncTry
+const asyncTry = require('@exivar/funtry').asyncTry
 
 // returns array [result, error]
 var response = await asyncTry(<promise>);
@@ -31,7 +31,7 @@ var result = response[0];
 ES Module
 
 ```js
-import {asyncTry, syncTry} from 'funtry';
+import {asyncTry, syncTry} from '@exivar/funtry';
 
 const [result, error] = await asyncTry(<promise>);
 if(error){
