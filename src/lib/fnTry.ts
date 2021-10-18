@@ -1,17 +1,17 @@
-export async function asyncTry<T>(fn: Promise<T> | PromiseLike<T>): Promise<[T, false] | [null, Error]> {
+export async function asyncTry<T>(fn: Promise<T> | PromiseLike<T>): Promise<[T, null] | [null, Error]> {
 	try {
 		const res = await fn;
-		return [res, false];
+		return [res, null];
 	} catch (error) {
-		return [null, <Error> error];
+		return [null, error as Error];
 	}
 }
 
-export function syncTry<T>(fn: T): [T, false] | [null, Error] {
+export function syncTry<T>(fn: T): [T, null] | [null, Error] {
 	try {
 		const res = fn;
-		return [res, false];
+		return [res, null];
 	} catch (error) {
-		return [null, <Error> error];
+		return [null, error as Error];
 	}
 }
