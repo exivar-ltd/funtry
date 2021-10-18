@@ -1,6 +1,6 @@
 {
-  "name": "funtry",
-  "version": "1.0.0",
+  "name": "@exivar/funtry",
+  "version": "1.0.1",
   "description": "Async try/catch function handler",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
